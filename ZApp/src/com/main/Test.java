@@ -11,6 +11,7 @@ public class Test {
 	public static void main(String[] args) {
 		
 		IDao dao;
+		
 		dao=getimp("com.dao.imp.DaoImpl")	;
 		
 		
@@ -28,6 +29,7 @@ public class Test {
 	{
 		IDao daot=null;
 		ServiceLoader<IDao> daos=ServiceLoader.load(IDao.class);
+		
 		
 		String impl=daos.getClass().getName();
 		for (IDao d : daos) {
